@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ImageSource.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FILE_TAGS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">h:\ImageSource\tags.xml</Value>
+    </Setting>
+    <Setting Name="FILE_TAGTYPES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">h:\ImageSource\tagTypes.xml</Value>
+    </Setting>
+    <Setting Name="FILE_IMAGES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">h:\ImageSource\images.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

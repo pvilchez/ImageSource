@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageSource</name>
+    </assembly>
+    <members>
+        <member name="T:ImageSource.ConfirmDialog">
+            <summary>
+            Controller for the "ConfirmDialog" form.
+            </summary>
+        </member>
+        <member name="F:ImageSource.ConfirmDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.ConfirmDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.ConfirmDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ImageSource.ConfirmDialog.#ctor">
+            <summary>
+            A confirm dialog to be presented to the user.  Default strings are used for all fields.
+            </summary>
+        </member>
+        <member name="M:ImageSource.ConfirmDialog.#ctor(System.String,System.String,System.String,System.String,System.EventHandler{System.EventArgs},System.EventHandler{System.EventArgs})">
+            <summary>
+            A confirm dialog to be presented to the user.  Custom strings are used for all fields.
+            Additionally, custom handlers for the 'Yes' and 'No' answer buttons can be supplied.
+            </summary>
+            <param name="yes">The text to appear on the 'Yes' answer button</param>
+            <param name="no">The text to appear on the 'No' answer button</param>
+            <param name="prompt">The text to appear as a prompt for the user to confirm</param>
+            <param name="title">The text to appear as title to the window</param>
+            <param name="yesHandler">The handler to run when the 'Yes' answer button is pressed.</param>
+            <param name="noHandler">The handler to run when the 'No' answer button is pressed.</param>
+        </member>
+        <member name="T:ImageSource.TagOrganizer">
+            <summary>
+            The SourceImageOrganizer is used to add, remove and modify images
+            in the ImageSource program.  This class maintains a list of all
+            SourceImage objects, and calls the SourceImageFactory as necessary
+            to change the values of the reference file.
+            This is a singleton class, and must be accessed using the
+            getInstance() method.
+            
+            This class is used to gain the functionality of the SourceImageFactory class.
+            </summary>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.getInstance">
+            <summary>
+            Returns the single instance of the TagOrganizer in the running program.
+            <example>
+            Example:
+            <code>
+            //get the instance
+            TagOrganizer tagOrganizer = TagOrganizer.getInstance();
+            
+            //the same organizer object can now be used to access the tags from
+            //any class which has retrieved an instance.
+            </code>
+            </example>
+            </summary>
+            <returns>The current TagOrganizer instance.</returns>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.getTagTypeList">
+            <summary>
+            This is used to obtain a list of all TagType objects loaded into the system.
+            </summary>
+            <returns>Returns an ArrayList created from a <![CDATA[KeyValuePair<string name, TagType tagType>]]>
+            object, where "name" is name of the TagType, and "tagType" is the TagType object.</returns>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.removeTagType(System.String)">
+            <summary>
+            Removes the specified TagType from the system, and then calls
+            TagFactory to remove the TagType from the reference file.
+            
+            This will remove all Tags of this TagType from any images which
+            have them applied.
+            </summary>
+            <param name="tagType">The TagType to be removed.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.addTagType(System.String,System.Int32)">
+            <summary>
+            Adds a new TagType to the system, and calls TagFactory to add it to the
+            reference file.
+            </summary>
+            <param name="name">The name of the TagType to be created.</param>
+            <param name="dataType">The datatype of the TagType to be created.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.changeTagType(System.String,System.Int32)">
+            <summary>
+            Changes the datatype of an existing TagType object, and calls TagFactory
+            to make the change to the reference file.
+            
+            Any existing tags will remain, however their values will be set to the
+            default minimum.
+            </summary>
+            <param name="name">The name of the TagType to be modified.</param>
+            <param name="newDataType">The new datatype of the TagType to be modified.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.getTagList(System.String)">
+            <summary>
+            This is used to obtain a list of all Tag objects loaded into the system.
+            </summary>
+            <returns>Returns an ArrayList created from a <![CDATA[KeyValuePair<string name, Tag tag>]]>
+            object, where "name" is name of the tag.TagType object, and "tag" is the Tag object.</returns>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.removeTag(System.String,ImageSource.Tag)">
+            <summary>
+            Removes the specified TagType from the system, and then calls
+            TagFactory to remove the TagType from the reference file.
+            
+            This will remove all Tags of this TagType from any images which
+            have them applied.
+            </summary>
+            <param name="imageName">The full name of the image, including file extension,
+            of the image to remove the Tag from.</param>
+            <param name="tag">The Tag object to be removed from the system.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.addTag(System.String,System.String,System.Object)">
+            <summary>
+            Adds a new Tag to the system, and calls TagFactory to add it to the
+            reference file.
+            </summary>
+            <param name="imageName">The full name of the image, including file extension,
+            that the Tag object should be added to.</param>
+            <param name="newValue">The value of the Tag object to be created.</param>
+            <param name="tagType">The TagType of the Tag object to be created.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.changeTag(System.String,System.String,System.Object)">
+            <summary>
+            Changes the value of a Tag in the system.
+            </summary>
+            <param name="imageName">The name of the image the Tag is applied to.</param>
+            <param name="tagType">The TagType of the Tag to be modified.</param>
+            <param name="newValue">The new value of the Tag to be modified.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.removeAllTags(System.String)">
+            <summary>
+            Removes all Tag objects from the specified image.
+            </summary>
+            <param name="imageName">The full name of the image, including file extension, to be removed.</param>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.sortTags(ImageSource.TagType,System.String)">
+            <summary>
+            Returns a list of all images which have a Tag of TagType.dataType Constants.DATATYPE_STRING,
+            whose value contains the specified search string.
+            </summary>
+            <param name="type">The TagType of the Tag to be searched for.</param>
+            <param name="searchPattern">The string to be searched for.</param>
+            <returns>The ArrayList of images in <![CDATA[KeyValuePair<string name, SourceImage image>]]>
+            format that match the search criteria.</returns>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.sortTags(ImageSource.TagType,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Returns a list of all images which have a Tag of TagType.dataType Constants.DATATYPE_INT,
+            whose value, on the interval [lowerBound, upperBound].
+            </summary>
+            <param name="type">The TagType of the Tag to be searched for.</param>
+            <param name="lowerBound">The lower boundary on the search.</param>
+            <param name="upperBound">The upper boundary on the search.</param>
+            <returns>The ArrayList of images in <![CDATA[KeyValuePair<string name, SourceImage image>]]>
+            format that match the search criteria.</returns>
+        </member>
+        <member name="M:ImageSource.TagOrganizer.sortTags(ImageSource.TagType,System.DateTime,System.DateTime)">
+            <summary>
+            Returns a list of all images which have a Tag of TagType.dataType Constants.DATATYPE_DATE,
+            whose value, on the interval [lowerBound, upperBound].
+            </summary>
+            <param name="type">The TagType of the Tag to be searched for.</param>
+            <param name="lowerBound">The lower boundary on the search.</param>
+            <param name="upperBound">The upper boundary on the search.</param>
+            <returns>The ArrayList of images in <![CDATA[KeyValuePair<string name, SourceImage image>]]>
+            format that match the search criteria.</returns>
+        </member>
+        <member name="T:ImageSource.SourceImageFactory">
+            <summary>
+            The SourceImageFactory is used to read and write the SourceImage objects
+            directly to the file name specified in Constants.FILE_IMAGES .  This is a
+            singleton class, and must be accessed using the getInstance() static method.
+            </summary>
+        </member>
+        <member name="M:ImageSource.SourceImageFactory.getInstance">
+            <summary>
+            Returns the single instance of the SourceImageFactory in the running program.
+            <example>
+            Example:
+            <code>
+            //get the instance
+            SourceImageFactory imageFactory = SourceImageFactory.getInstance();
+            
+            //the same factory object can now be used to access the file from
+            //any class which has retrieved an instance.
+            </code>
+            </example>
+            </summary>
+            <returns>The current SourceImageFactory instance.</returns>
+        </member>
+        <member name="M:ImageSource.SourceImageFactory.addImage(System.String,System.String)">
+            <summary>
+            Adds the specified SourceImage object to the XML file specified in Constants.FILE_IMAGES.
+            </summary>
+            <param name="path">The path of the full path of the file, inclduing file name and file extension.</param>
+            <param name="imageName">The name of the file, including file extension.</param>
+        </member>
+        <member name="M:ImageSource.SourceImageFactory.removeImage(System.String)">
+            <summary>
+            Removes the specified SourceImage object from the XML file specified in Constants.FILE_IMAGES.
+            All for the image are also removed, using the TagOrganizer.
+            </summary>
+            <param name="imageName">The name of the file to be removed, including file extension.</param>
+        </member>
+        <member name="M:ImageSource.SourceImageFactory.getImageList">
+            <summary>
+            Returns a list of all images in the ImageSource project.
+            </summary>
+            <returns>An image list in <![CDATA[Dictionary<string imageName,SourceImage image>]]> format, where
+            'imageName' is the full file name, and 'image' is the SourceImage object. </returns>
+        </member>
+        <member name="T:ImageSource.SourceImage">
+            <summary>
+            The SourceImage class is used to hold the image objects.
+            Using the EMGU framework, images can be loaded using only
+            a file path, contained within the SourceImage class.
+            </summary>
+        </member>
+        <member name="M:ImageSource.SourceImage.#ctor(System.String,System.String)">
+            <summary>
+            Create a new SourceImage object, using the supplied path and 
+            file name.
+            </summary>
+            <param name="path">The complete file path, including file and file extension</param>
+            <param name="imageName">The name of the image, including file extension.</param>
+        </member>
+        <member name="M:ImageSource.SourceImage.ToString">
+            <summary>
+            Returns the full path of the file.
+            </summary>
+            <returns>The full file path.</returns>
+        </member>
+        <member name="P:ImageSource.SourceImage.path">
+            <summary>
+            Returns the full path required to access the image.
+            </summary>
+        </member>
+        <member name="P:ImageSource.SourceImage.name">
+            <summary>
+            Returns the name of the image.
+            </summary>
+        </member>
+        <member name="T:ImageSource.FormImageTags">
+            <summary>
+            Controller for the "FormImageTags" form.
+            </summary>
+        </member>
+        <member name="F:ImageSource.FormImageTags.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageTags.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.FormImageTags.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageTags.#ctor">
+            <summary>
+            Constructor.  This will cause an exception to be thrown, .
+            since an image must be provided.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageTags.#ctor(ImageSource.SourceImage)">
+            <summary>
+            Constructor.  The image provided will be used to search
+            for tags applied to the image.
+            </summary>
+            <param name="image">The image the tags apply to.</param>
+        </member>
+        <member name="M:ImageSource.FormImageTags.removeTag(System.Object,System.EventArgs)">
+            <summary>
+            This function removes the image tag from ImageSource.  This is 
+            used as the postive action when confirming an image removal.
+            </summary>
+            <param name="sender">The object which triggered the event</param>
+            <param name="e">The event details</param>
+        </member>
+        <member name="M:ImageSource.FormImageTags.noAction(System.Object,System.EventArgs)">
+            <summary>
+            This function only refetches the tag list for the image. It
+            is used as the negative action when confirming an image removal.
+            </summary>
+            <param name="sender">The object which triggered the event</param>
+            <param name="e">The event details</param>
+        </member>
+        <member name="T:ImageSource.FormStartWindow">
+            <summary>
+            Controller for "FromStartWindow" form.  This serves as the entry
+            form for the ImageSource program.
+            </summary>
+        </member>
+        <member name="F:ImageSource.FormStartWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormStartWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.FormStartWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormStartWindow.#ctor">
+            <summary>
+            Constructor.  Set the intro text for the user.
+            </summary>
+        </member>
+        <member name="T:ImageSource.Constants">
+            <summary>
+            Constant values to be used throughout the ImageSource project.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.DATATYPE_INT">
+            <summary>
+            Constant representing the 'Integer' datatype for tag types.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.DATATYPE_DATE">
+            <summary>
+            Constant representing the 'Date' datatype for tag types.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.DATATYPE_STRING">
+            <summary>
+            Constant representing the 'String' datatype for tag types.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.DATE_START_NULL">
+            <summary>
+            The minimum value of DateTime allowed.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.DATA_END_NULL">
+            <summary>
+            The maximum value of DateTime allowed.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_NO">
+            <summary>
+            Constant string used for 'No'
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_YES">
+            <summary>
+            Constant string used for 'Yes'
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_TAGTYPE_REMOVE">
+            <summary>
+            Constant string used for prompting removal of tag types.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_TAG_REMOVE">
+            <summary>
+            Constant string used for prompting removal of tags.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_IMAGE_REMOVE">
+            <summary>
+            Constant string used for prompting removal of images.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_CONFIRM_TITLE">
+            <summary>
+            Constant string used for 'Confirm'
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_CONFIRM_PROMPT">
+            <summary>
+            Constant string used for prompting generic action.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_LOWERBOUND_INT">
+            <summary>
+            Constant string used for lower search bound of 'Integer' datatype.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_UPPERBOUND_INT">
+            <summary>
+            Constant string used for upper search bound of 'Integer' datatype.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_LOWERBOUND_DATE">
+            <summary>
+            Constant string used for lower search bound of 'Date' datatype.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_UPPERBOUND_DATE">
+            <summary>
+            Constant string used for upper search bound of 'Date' datatype.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.STRING_BOUND_STRING">
+            <summary>
+            Constant string used for search string of 'String' datatype.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.FILE_TAGS">
+            <summary>
+            Constant URI for tag reference file.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.FILE_TAGTYPES">
+            <summary>
+            Constant URI for tag type reference file.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.FILE_IMAGES">
+            <summary>
+            Constant URI for image reference file.
+            </summary>
+        </member>
+        <member name="F:ImageSource.Constants.FILE_FILTER_IMAGES">
+            <summary>
+            Constant file type filter for supported image types.
+            </summary>
+        </member>
+        <member name="T:ImageSource.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ImageSource.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ImageSource.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:ImageSource.TagFactory">
+            <summary>
+            The TagFactory is used to read and write the Tag objectsd directly to the 
+            file name specified in Constants.FILE_IMAGES .  This is a singleton class,
+            and must be accessed using the getInstance() static method.
+            </summary>
+        </member>
+        <member name="M:ImageSource.TagFactory.getInstance">
+            <summary>
+            Returns the single instance of the TagFactory in the running program.
+            <example>
+            Example:
+            <code>
+            //get the instance
+            TagFactory tagFactory = TagFactory.getInstance();
+            
+            //the same factory object can now be used to access the tag factory from
+            //any class which has retrieved an instance.
+            </code>
+            </example>
+            </summary>
+            <returns>The current TagFactory instance.</returns>
+        </member>
+        <member name="M:ImageSource.TagFactory.readTagTypes">
+            <summary>
+            Returns a list of all TagType objects in the tag type reference file specified
+            in Constants.FILE_TAGTYPES.
+            </summary>
+            <returns>A TagType list in <![CDATA[Dictionary<string name, TagType tagType>]]> format where
+            "name" is the name of the TagType object, and tagType is the TagType object.</returns>
+        </member>
+        <member name="M:ImageSource.TagFactory.writeTagType(ImageSource.TagType)">
+            <summary>
+            Writes a TagType object to the tagTypes reference file specified in 
+            Constants.FILE_TAGTYPES.
+            </summary>
+            <param name="tagType">The TagType object to be written.</param>
+        </member>
+        <member name="M:ImageSource.TagFactory.removeTagType(ImageSource.TagType)">
+            <summary>
+            Removes the specified TagType from the tagTypes reference file 
+            specified in Constants.FILE_TAGTYPES.
+            
+            NOTE: This will orphan any Tag object which were not properly removed!
+            </summary>
+            <param name="tagType">The TagType to be removed.</param>
+        </member>
+        <member name="M:ImageSource.TagFactory.readTags(System.Collections.Generic.Dictionary{System.String,ImageSource.TagType})">
+            <summary>
+            Returns a list of all Tag objects in the tag type reference file specified
+            in Constants.FILE_TAGS.
+            </summary>
+            <returns>A Tag list in <![CDATA[Dictionary<string name, Dictionary<string tagName, Tag tag>>]]> 
+            format where "name" is the name of the image the tag is applied to, "tagName" is the
+            name of the tag.tagType object, and "tag" is the Tag object.</returns>
+        </member>
+        <member name="M:ImageSource.TagFactory.writeTag(System.String,ImageSource.Tag)">
+            <summary>
+            Write the specified Tag object for the specified image to the tags reference file 
+            specified in Constants.FILE_TAGS. An image element will be added to the reference file,
+            and the tag written to it.  If an image element already exists, the tag will simply
+            be added to that list.
+            </summary>
+            <param name="imageName">The name of the image to add the Tag object.</param>
+            <param name="tag">The Tag object to add.</param>
+        </member>
+        <member name="M:ImageSource.TagFactory.removeTag(System.String,ImageSource.Tag)">
+            <summary>
+            Removes the specified Tag object from the specified image from the tags reference file
+            specified in Constants.FILE_TAGS.
+            </summary>
+            <param name="imageName">The file name of the image to remove the Tag object from.</param>
+            <param name="tag">The Tag object to be removed.</param>
+        </member>
+        <member name="T:ImageSource.FormImages">
+            <summary>
+            Controller for "FormImages" form.
+            </summary>
+        </member>
+        <member name="F:ImageSource.FormImages.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImages.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.FormImages.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImages.#ctor">
+            <summary>
+            Constructor.  This gets instances of necessary classes, gets
+            lists of tag types and images, and add a closing handler.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImages.removeImage(System.Object,System.EventArgs)">
+            <summary>
+            Function called to remove an image.  This is used for the positive
+            action for confirming to remove of an image from ImageSource.
+            </summary>
+            <param name="sender">The object which triggered the event.</param>
+            <param name="e">The event details.</param>
+        </member>
+        <member name="M:ImageSource.FormImages.noAction(System.Object,System.EventArgs)">
+            <summary>
+            This function only gets a new image list.  This is used for the
+            negative action for confirming the removal of an image from ImageSource.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:ImageSource.FormTags">
+            <summary>
+            Controller for "FormTags" form.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormTags.#ctor">
+            <summary>
+            Constructor.  Sets up the TagOrganizer, sets up comboboxes, and adds closing handler.
+            </summary>
+        </member>
+        <member name="F:ImageSource.FormTags.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormTags.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.FormTags.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ImageSource.FormImageEdit">
+            <summary>
+            Controller for "FormImageEdit" form.
+            </summary>
+        </member>
+        <member name="F:ImageSource.FormImageEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ImageSource.FormImageEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageEdit.#ctor">
+            <summary>
+            Constructor.  No image will be displayed.  No further actions will be possible.
+            </summary>
+        </member>
+        <member name="M:ImageSource.FormImageEdit.#ctor(ImageSource.SourceImage)">
+            <summary>
+            Constructor.  The image provided will be automatically displayed when the form is shown.
+            </summary>
+            <param name="image">The image to be displayed when the window is shown.</param>
+        </member>
+        <member name="T:ImageSource.Tag">
+            <summary>
+            The Tag class hold all information about a particular 
+            tag which has been applied to an image.
+            </summary>
+        </member>
+        <member name="M:ImageSource.Tag.#ctor(ImageSource.TagType,System.Object)">
+            <summary>
+            Create a new Tag object with the specified TagType and value.
+            </summary>
+            <param name="type">The TagType of the image.</param>
+            <param name="val">The value of the tag applied to an image.</param>
+        </member>
+        <member name="M:ImageSource.Tag.ToString">
+            <summary>
+            Returns the tagValue of the Tag.
+            </summary>
+            <returns>The tagValue of the Tag</returns>
+        </member>
+        <member name="P:ImageSource.Tag.tagValue">
+            <summary>
+            Gets and sets the value of the tag.  The type of tagValue must be the
+            same as the type specified by tagType.dataType.
+            </summary>
+        </member>
+        <member name="P:ImageSource.Tag.tagType">
+            <summary>
+            Gets or sets the TagType of the Tag.  When tagType is set, the tagValue
+            is automatically set to null.
+            </summary>
+        </member>
+        <member name="T:ImageSource.SourceImageOrganizer">
+            <summary>
+            The SourceImageOrganizer is used to add, remove and modify images
+            in the ImageSource program.  This class maintains a list of all
+            SourceImage objects, and calls the SourceImageFactory as necessary
+            to change the values of the reference file.
+            This is a singleton class, and must be accessed using the
+            getInstance() method.
+            
+            This class is used to gain the functionality of the SourceImageFactory class.
+            </summary>
+        </member>
+        <member name="M:ImageSource.SourceImageOrganizer.getImageList">
+            <summary>
+            This is used to obtain a list of all image objects loaded into the system.
+            </summary>
+            <returns>Returns an ArrayList created from a <![CDATA[KeyValuePair<string name, SourceImage image>]]>
+            object, where "name" is the file name of the image, and "image" is the SourceImage object.</returns>
+        </member>
+        <member name="M:ImageSource.SourceImageOrganizer.addImage(System.String,System.String)">
+            <summary>
+            Creates a SourceImage based on the provided information, and adds it to the
+            system.  The SourceImageFactory is then called to add the SourceImage
+            object to the reference file.
+            
+            If the image already exists, the image is not added to the system a second
+            time.
+            </summary>
+            <param name="imageName">The full file name of the image to be added, including file extension.</param>
+            <param name="path">The full path to the image to be added, including file name and file extension.</param>
+        </member>
+        <member name="M:ImageSource.SourceImageOrganizer.removeImage(System.String)">
+            <summary>
+            Removes the specified image from the system, and then calls
+            SourceImageFactory to remove the image from the reference file.
+            </summary>
+            <param name="imageName">The file name, including file extension, to be removed.</param>
+        </member>
+        <member name="M:ImageSource.SourceImageOrganizer.getInstance">
+            <summary>
+            Returns the single instance of the SourceImageOrganizer in the running program.
+            <example>
+            Example:
+            <code>
+            //get the instance
+            SourceImageOrganizer imageOrganizer = SourceImageOrganizer.getInstance();
+            
+            //the same organizer object can now be used to access the images from
+            //any class which has retrieved an instance.
+            </code>
+            </example>
+            </summary>
+            <returns>The current SourceImageOrganizer instance.</returns>
+        </member>
+        <member name="M:ImageSource.SourceImageOrganizer.getImageMap">
+            <summary>
+            A function used to get a list of all SourceImage objects.
+            
+            <seealso cref="M:ImageSource.SourceImageOrganizer.getImageList"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ImageSource.Program.Main">
+            <summary>
+            The entry point for the application.
+            </summary>
+            
+        </member>
+        <member name="T:ImageSource.TagType">
+            <summary>
+            The TagType class is used to represent the name and datatype of any tag which
+            can be applied to an image.  The name of each TagType in the list of Tag objects
+            applied to an image must be unique to the image.
+            </summary>
+        </member>
+        <member name="M:ImageSource.TagType.#ctor(System.Int32,System.String)">
+            <summary>
+            Create a new TagType with the specified datatype and name.
+            The dataType can be one of:
+             - Constants.DATATYPE_INT
+             - Constants.DATATYPE_DATE
+             - Constants.DATATYPE_STRING
+            </summary>
+            <param name="dataType">The datatype of the TagType to be created.</param>
+            <param name="name">The name of the TagType to be created.</param>
+        </member>
+        <member name="M:ImageSource.TagType.ToString">
+            <summary>
+            Returns textual representation of the dataType of the TagType object.
+            </summary>
+            <returns>The name of the TagType object's datatype</returns>
+        </member>
+        <member name="P:ImageSource.TagType.name">
+            <summary>
+            Gets the name of the TagType object.
+            </summary>
+        </member>
+        <member name="P:ImageSource.TagType.dataType">
+            <summary>
+            Gets and sets the datatype of the TagType object, as specified in Constants.  If 
+            an incorrect value is supplied, a default of Constant.DATATYPE_STRING is used.
+            </summary>
+        </member>
+    </members>
+</doc>

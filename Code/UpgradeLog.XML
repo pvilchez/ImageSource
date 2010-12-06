@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ImageSource">
+</Property><Property Name="Solution File" Value="C:\Users\Paul\Documents\ImageSource\ImageSource.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Paul\Documents\ImageSource\ImageSource.suo">
+</Property><Property Name="Date" Value="Saturday, November 27, 2010">
+</Property><Property Name="Time" Value="15:23 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ImageSource.sln" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ImageSource.suo" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource.suo">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ImageSource.csproj" Description="Project file successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\ImageSource.csproj">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ConfirmDialog.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\ConfirmDialog.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ConfirmDialog.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\ConfirmDialog.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Constants.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Constants.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Form1.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Form1.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Form1.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImageEdit.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImageEdit.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImageEdit.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImageEdit.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImages.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImages.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImages.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImages.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormStartWindow.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormStartWindow.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormStartWindow.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormStartWindow.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormTags.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormTags.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormTags.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormTags.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Program.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Program.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\SourceImage.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\SourceImage.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\SourceImageFactory.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\SourceImageFactory.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\SourceImageOrganizer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\SourceImageOrganizer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Tag.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Tag.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\TagFactory.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\TagFactory.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\TagOrganizer.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\TagOrganizer.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\TagType.cs" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\TagType.cs">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ClassDiagram1.cd" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Properties\Settings.settings" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ConfirmDialog.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\ConfirmDialog.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Form1.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Form1.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImageEdit.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImageEdit.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormImages.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormImages.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormStartWindow.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormStartWindow.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\FormTags.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\FormTags.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\Properties\Resources.resx" Description="File successfully backed up as C:\Users\Paul\Documents\ImageSource\Backup\ImageSource\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ImageSource.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ImageSource" Source="ImageSource\ImageSource.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ImageSource.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ImageSource.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ImageSource" Source="ImageSource\ImageSource.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

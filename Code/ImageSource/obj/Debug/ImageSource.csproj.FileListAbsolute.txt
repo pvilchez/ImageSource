@@ -1,0 +1,76 @@
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.Form1.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.Properties.Resources.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.csproj.GenerateResource.Cache
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\bin\Debug\ImageSource.exe
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\bin\Debug\ImageSource.pdb
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.exe
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.pdb
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.FormImages.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.FormStartWindow.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.FormTags.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.ConfirmDialog.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.FormImageEdit.resources
+C:\Users\Kevin\Desktop\KScope\ImageSource\ImageSource\obj\Debug\ImageSource.FormImageTags.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.exe
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.UI.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ZedGraph.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.exe.config
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.pdb
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.ML.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.Util.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\zlib.net.dll
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.xml
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.ML.xml
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.CV.UI.xml
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\Emgu.Util.xml
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ResolveAssemblyReference.cache
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.ConfirmDialog.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.FormImageEdit.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.FormImages.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.FormImageTags.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.FormStartWindow.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.FormTags.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.Properties.Resources.resources
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\GenerateResource.read.1.tlog
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\GenerateResource.write.1.tlog
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.exe
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.pdb
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.exe.manifest
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.application
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.exe.manifest
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\obj\Debug\ImageSource.application
+H:\emgucv 2.1.0.793\Emgu.CV.Example\ImageSource\ImageSource\bin\Debug\ImageSource.XML
+H:\Code\ImageSource\bin\Debug\ImageSource.exe.config
+H:\Code\ImageSource\obj\Debug\ImageSource.exe
+H:\Code\ImageSource\obj\Debug\ImageSource.pdb
+H:\Code\ImageSource\bin\Debug\ImageSource.exe.manifest
+H:\Code\ImageSource\bin\Debug\ImageSource.application
+H:\Code\ImageSource\bin\Debug\ImageSource.exe
+H:\Code\ImageSource\bin\Debug\ImageSource.pdb
+H:\Code\ImageSource\bin\Debug\zlib.net.dll
+H:\Code\ImageSource\bin\Debug\ZedGraph.dll
+H:\Code\ImageSource\bin\Debug\Emgu.CV.pdb
+H:\Code\ImageSource\bin\Debug\Emgu.CV.xml
+H:\Code\ImageSource\bin\Debug\Emgu.CV.ML.xml
+H:\Code\ImageSource\bin\Debug\Emgu.CV.UI.pdb
+H:\Code\ImageSource\bin\Debug\Emgu.CV.UI.xml
+H:\Code\ImageSource\bin\Debug\Emgu.Util.pdb
+H:\Code\ImageSource\bin\Debug\Emgu.Util.xml
+H:\Code\ImageSource\bin\Debug\ZedGraph.xml
+H:\Code\ImageSource\bin\Debug\zh-CN\Emgu.CV.UI.resources.dll
+H:\Code\ImageSource\bin\Debug\zh-CN\ZedGraph.resources.dll
+H:\Code\ImageSource\obj\Debug\ResolveAssemblyReference.cache
+H:\Code\ImageSource\obj\Debug\ImageSource.ConfirmDialog.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.FormImageEdit.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.FormImages.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.FormImageTags.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.FormStartWindow.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.FormTags.resources
+H:\Code\ImageSource\obj\Debug\ImageSource.Properties.Resources.resources
+H:\Code\ImageSource\obj\Debug\GenerateResource.read.1.tlog
+H:\Code\ImageSource\obj\Debug\GenerateResource.write.1.tlog
+H:\Code\ImageSource\obj\Debug\ImageSource.exe.manifest
+H:\Code\ImageSource\obj\Debug\ImageSource.application
+H:\Code\ImageSource\bin\Debug\ImageSource.XML
