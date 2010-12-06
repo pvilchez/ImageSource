@@ -1,0 +1,11 @@
+ImageSource, 2010
+By: Kevin Ryans, Paul Vilchez
+
+
+About:
+	Developed for a school course, it is a C# project that uses the Emgu CV wrapper for OpenCV. 
+
+The VS2010 project can be found in the main folder.
+/Documentation contains: Design Doc, User Manual, References
+/Code contains the project code.
+/Code/PublicDomain contains a batch of free images pulled from the interwebs, used to test out the program.
